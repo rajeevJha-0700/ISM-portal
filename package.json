@@ -1,0 +1,21 @@
+{
+  "name": "ism-portal",
+  "version": "1.0.0",
+  "description": "A web platform for monitoring time-series data from IoT sensors",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rajeevJha",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.2",
+    "nodemailer": "^7.0.3",
+    "nodemon": "^3.1.10"
+  }
+}

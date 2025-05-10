@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Sensor | ISM Portal</title>
+  <link rel="stylesheet" href="./css/addSensor.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register New Sensor</h2>
+    <form method="POST">
+      <div class="form-group">
+        <label for="name">Sensor Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Room Temperature Sensor" required>
+      </div>
+
+      <div class="form-group">
+        <label for="type">Sensor Type</label>
+        <select id="type" name="type" required>
+          <option selected>Temperature</option>
+          <option>Humidity</option>
+          <option>Motion</option>
+          <option>Gas</option>
+          <option>Light</option>
+          <option>Smoke</option>
+          <option>Sound</option>
+          <option>Custom</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="uid">Sensor ID / UID</label>
+        <input type="text" id="uid" name="uid" placeholder="A1-B5786" required>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="e.g. Living Room, Floor 2">
+      </div>
+
+      <button type="submit">Add Sensor</button>
+    </form>
+  </div>
+  <script src="./js/sensorRegistration.js"></script>
+</body>
+</html>
