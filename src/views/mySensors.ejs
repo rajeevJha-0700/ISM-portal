@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Sensors</title>
+  <link rel="stylesheet" href="/css/mySensorsPage.css"> <!-- Link external CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Your Registered Sensors</h1>
+
+    <% if (sensors.length === 0) { %>
+      <p class="empty-text">No sensors registered yet.</p>
+    <% } else { %>
+      <div class="card-container">
+        <% sensors.forEach(sensor => { %>
+          <div class="sensor-card">
+            <h2><%= sensor.sensor_name %></h2>
+            <p><strong>Type:</strong> <%= sensor.sensor_type %></p>
+            <p><strong>id:</strong> <%= sensor.sensor_Id %></p>
+            <p><strong>Location:</strong> <%= sensor.location %></p>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>

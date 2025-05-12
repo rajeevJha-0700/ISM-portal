@@ -1,4 +1,4 @@
- console.log("hello")
+alert("please signup/login first")
 const form = document.querySelector("#signup-form");
 let signupFormData = {};
 
@@ -24,8 +24,11 @@ form.addEventListener("submit",async(evt)=>{
         console.log(ans);
         if(serverResponse.ok){
             console.log("successfully registerd");
+            alert(`welcome ${signupFormData["username"]}, thanks for joining us ....we are directing you back to the previous page`);
+            const prevPage = document.referrer;
+            location.href = prevPage;
         }else{
-            console.log("there is some problem")
+            console.log("there is some problem");
         }
     } catch (error) {
         alert("something went wrong...")
