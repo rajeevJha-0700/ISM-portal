@@ -39,6 +39,13 @@ import { verifyUser } from "./middleware/authMiddleware.js";
 app.get("/your_sensors", verifyUser, getAllSensors);
 app.get("/sensor-activities",verifyUser,sensorActivities);
 app.post("/save-sensor-data",verifyUser,saveSensorData);
+
+//test sensor
+
+app.get('/test-sensor', (req, res) => {
+ res.send("<h1>test-sensor page<h1>");
+});
+
 server.listen(port,host,()=>{
     console.log("server started...")
 })
